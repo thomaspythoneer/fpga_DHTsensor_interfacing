@@ -78,18 +78,6 @@ DHT11 Pin → FPGA
 
 **Pull-up:** 4.7kΩ-10kΩ resistor from DATA to VCC required.
 
-## Simulation Flow
-
-```bash
-# Compile and run
-vlog t2a_dht.v tb.v
-vsim -c tb
-
-# Expected output:
-# "No errors encountered, congratulations!"
-# result.txt → "No Errors"
-```
-
 ## Performance
 
 ```
@@ -99,15 +87,6 @@ Bit Resolution: ±2µs (100 clocks accuracy)
 Max RH:         99.99%
 Max Temp:       99.99°C
 Error Rate:     0% (verified)
-```
-
-## Waveforms
-
-```
-Master Start:   _____/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\____ (18ms LOW)
-Sensor Reply:   [80µs LOW-HIGH handshake]
-Data Bits:      _/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\____ (0-bit: 26µs)
-                _/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\____ (1-bit: 70µs)
 ```
 
 ## Applications
